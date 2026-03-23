@@ -126,7 +126,7 @@ This is the permanent, organized vault for every API key, token, password, and c
 
 | Label | Value | Status | Added |
 |-------|-------|--------|-------|
-| GitHub Username | `clawdking1-GH` | ACTIVE | 2026-03-21 |
+| GitHub Username | `ewing-operating-system` | ACTIVE | 2026-03-21 |
 | Auth Method | Keyring (via `gh auth`) | ACTIVE | 2026-03-21 |
 
 ---

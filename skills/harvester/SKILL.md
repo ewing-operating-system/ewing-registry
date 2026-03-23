@@ -11,7 +11,7 @@ Ewing is autistic and processes literally. Follow output-skill protocol: no fluf
 
 ## Central Destination — GitHub (ewing-registry)
 
-**Repo:** `https://github.com/clawdking1-GH/ewing-registry.git`
+**Repo:** `https://github.com/ewing-operating-system/ewing-registry.git`
 **Directory:** `harvests/`
 **Filename pattern:** `[machine-name]_[YYYY-MM-DD].md`
 
@@ -284,8 +284,8 @@ if [ -d "$HOME/ewing-registry/.git" ]; then
 elif [ -d "/Users/clawdbot/ewing-registry/.git" ]; then
   cd /Users/clawdbot/ewing-registry && git pull origin main
 else
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
   cd "$HOME/ewing-registry"
 fi
 ```
@@ -314,7 +314,7 @@ If git push fails due to auth:
 ### Step 5: Confirm
 Print exactly one line:
 ```
-Harvest pushed to ewing-registry: harvests/[filename] — https://github.com/clawdking1-GH/ewing-registry
+Harvest pushed to ewing-registry: harvests/[filename] — https://github.com/ewing-operating-system/ewing-registry
 ```
 
 Do not explain. Do not summarize. Do not ask questions.

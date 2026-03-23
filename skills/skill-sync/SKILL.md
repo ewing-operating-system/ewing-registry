@@ -11,7 +11,7 @@ description: "Keeps all skills synchronized between GitHub (ewing-registry) and 
 This eliminates: 🧩 SKILL-MISMATCH, 👯 DUPLICATE-SKILL, 📡 NO-SINGLE-SOURCE-OF-TRUTH
 
 ## Repo
-- **URL:** `https://github.com/clawdking1-GH/ewing-registry.git`
+- **URL:** `https://github.com/ewing-operating-system/ewing-registry.git`
 - **Skills directory:** `skills/` (at repo root)
 - **Local cache:** `~/.claude/skills/`
 
@@ -27,8 +27,8 @@ REGISTRY="$HOME/ewing-registry"
 if [ -d "$REGISTRY/.git" ]; then
   cd "$REGISTRY" && git pull origin main --quiet
 else
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null
 fi
 
 # Check if skills/ directory exists in registry
@@ -60,8 +60,8 @@ SKILLS_DIR="$HOME/.claude/skills"
 
 # Ensure registry exists
 if [ ! -d "$REGISTRY/.git" ]; then
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null
 fi
 
 cd "$REGISTRY" && git pull origin main --quiet

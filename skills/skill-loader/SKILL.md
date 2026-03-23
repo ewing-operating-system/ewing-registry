@@ -19,8 +19,8 @@ if [ -d "$REGISTRY/.git" ]; then
 elif [ -d "/Users/clawdbot/ewing-registry/.git" ]; then
   cd /Users/clawdbot/ewing-registry && git pull origin main --quiet
 else
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null
 fi
 # Sync skills from registry to local
 if [ -d "$REGISTRY/skills" ]; then

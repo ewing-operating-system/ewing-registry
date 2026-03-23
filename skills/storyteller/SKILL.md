@@ -125,8 +125,8 @@ elif [ -d "/Users/clawdbot/ewing-registry/.git" ]; then
   cd /Users/clawdbot/ewing-registry && git pull origin main
 else
   # Clone it — try HTTPS first (works without SSH keys)
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
   cd "$HOME/ewing-registry"
 fi
 ```
@@ -161,6 +161,6 @@ If git push fails due to auth:
 After push succeeds, tell Ewing:
 - "Story pushed to ewing-registry: stories/[filename]"
 - "Audit pushed to ewing-registry: analysis/[filename]"
-- Include the GitHub URL: https://github.com/clawdking1-GH/ewing-registry
+- Include the GitHub URL: https://github.com/ewing-operating-system/ewing-registry
 
 ### CRITICAL: Never skip the push. Never ask Ewing to transfer the file manually. Always attempt the push first. The entire point of this skill is zero-effort collection.

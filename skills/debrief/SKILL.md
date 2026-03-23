@@ -17,8 +17,8 @@ ls ~/.claude/skills/skill-sync/SKILL.md 2>/dev/null
 ```bash
 REGISTRY="$HOME/ewing-registry"
 if [ ! -d "$REGISTRY/.git" ]; then
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$REGISTRY" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$REGISTRY" 2>/dev/null
 fi
 if [ -f "$REGISTRY/skills/skill-sync/SKILL.md" ]; then
   mkdir -p ~/.claude/skills/skill-sync
@@ -136,8 +136,8 @@ if [ -d "$HOME/ewing-registry/.git" ]; then
 elif [ -d "/Users/clawdbot/ewing-registry/.git" ]; then
   cd /Users/clawdbot/ewing-registry && git pull origin main
 else
-  git clone https://github.com/clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
-  git clone git@github.com:clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
+  git clone https://github.com/ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
+  git clone git@github.com:ewing-operating-system/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
   cd "$HOME/ewing-registry"
 fi
 ```
@@ -170,7 +170,7 @@ Debrief complete for [SESSION-NAME] on [MACHINE].
 - Harvest: harvests/[filename]
 - Story: stories/[filename]
 - Audit: analysis/[filename]
-Pushed to: https://github.com/clawdking1-GH/ewing-registry
+Pushed to: https://github.com/ewing-operating-system/ewing-registry
 ```
 
 ---
