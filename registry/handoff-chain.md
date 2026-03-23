@@ -1,49 +1,61 @@
 # Handoff Chain — What The Next Thread Needs To Know
-# Updated by each debrief. Read this FIRST in any new session.
-# Updated: 2026-03-23
+# Updated: 2026-03-23T19:45:00Z
+# Source: Mac mini consolidation thread (final debrief)
 
-## Latest Handoff: Consolidation Thread (Mac mini, 2026-03-23)
+## READ THESE FILES FIRST
+1. `analysis/full-tagged-registry.md` — complete 30-tag inventory of everything
+2. `analysis/engineer-requirements.md` — 10 capabilities the virtual engineer must have
+3. `analysis/call-data-summary.md` — 1,386 calls from March 16-20
+4. `registry/gotchas.md` — platform bugs to avoid
+5. This file — you're reading it
 
-### What's unfinished
-1. Pipeline middle layer NOT WIRED: Google Sheets → Supabase → Salesfinity still disconnected
-2. 26 "send an email" follow-ups from this week's calls — not yet drafted or sent
-3. 17 "call back later" callbacks — not yet scheduled on calendar
-4. 7 meetings from this week — need confirmation and prep materials
-5. 3 referrals need immediate action: Ryan (Evo Pest owner), Ian Poacher (Pacific Shore — WANTS TO SELL), Steve at Lenox Advisors
-6. GREEN's 3 unpushed commits on coldcall-universe v2-overnight-build branch
-7. debugger-tool has 2 unpushed commits
-8. GitHub PAT ghp_Y6Z38x3... needs rotation (exposed in remote URLs)
-9. MacBook-GREEN disk at 96% — needs cleanup
-10. SSH not enabled on Mac mini — physical bottleneck remains
+## Current State
 
-### What's broken
-- Slack canvas write from Cowork VMs (abandoned approach, now using GitHub)
-- GitHub push from some Cowork VMs (no git credentials)
-- Plugin/MCP inconsistency across Cowork sessions
+### Repo
+- **ONE repo:** `ewing-operating-system/ewing-registry` (public)
+- **72 files, 23 skills**
+- Mac mini pushes as collaborator (clawdking1-GH)
+- MacBook-27 pushes as owner (ewing-operating-system)
+- Any machine can pull (public)
 
-### What's blocking
-- SpokePhone integration: waiting on API credentials
-- Google Sheets → Supabase wiring: needs development
-- Supabase → Salesfinity wiring: needs development
-- Remote control of Mac mini: needs SSH setup or Screen Sharing enabled
+### Machines
+| Machine | Purpose | Synced? |
+|---|---|---|
+| MacBook-27 | Primary work — calls, deals, daily operations | ✅ 23 skills |
+| Mac mini | ClawdBot infrastructure — skill authoring, registry | ✅ 24 skills |
+| MacBook-GREEN | Broken screen, 96% disk, mostly offline | ❌ Needs sync |
 
-### What's next (priority order)
-1. **Monday offense:** Confirm 7 meetings, call 3 referrals, send 26 follow-up emails, schedule 17 callbacks
-2. **Wire the pipeline middle:** Sheets → Supabase → Salesfinity
-3. **Run debrief** in remaining open threads to capture everything
-4. **Consolidate Supabase:** Verify which of 4 instances are needed, decommission the rest
-5. **Unify GitHub:** Pick one account, migrate repos
+### Accounts (consolidated)
+| Service | Account | Status |
+|---|---|---|
+| GitHub | ewing-operating-system | ✅ PRIMARY |
+| GitHub | clawdking1-GH | Collaborator on registry. 3 repos need migration. |
+| Supabase | 4 instances | ❌ NEEDS CONSOLIDATION |
+| Google Drive | ewing@chapter.guide | ✅ Primary work |
+| Claude | ewing@engram.nexus | ✅ |
+| Apple ID (Mac mini) | clawdking1@gmail.com | ⚠️ Different from other Macs |
 
-### What to NOT repeat
-- Don't post to Slack canvas — it doesn't work from Cowork VMs
-- Don't build apps to solve config problems (Hovering Cloud lesson)
-- Don't create new Supabase instances — check existing ones first
-- Don't hardcode API keys in skills — reference the vault
-- Don't assume file paths — always use find
+## Monday Offense Priorities
+1. Confirm 7 meetings
+2. Call 3 referrals (Ian Poacher WANTS TO SELL)
+3. Send 26 follow-up emails
+4. Schedule 17 callbacks
+5. Load fresh lists into Salesfinity
+6. Dial — pest control (hottest) + LP/placement
 
-### Files to read first
-- `ewing-registry/analysis/full-tagged-registry.md` — complete inventory with all 30 tags
-- `ewing-registry/analysis/engineer-requirements.md` — what the virtual engineer must do
-- `ewing-registry/analysis/call-data-summary.md` — this week's 1,386 calls
-- `ewing-registry/registry/gotchas.md` — platform bugs to avoid
-- This file (handoff-chain.md) — you're reading it
+## Unfinished Work
+1. Pipeline middle: Sheets → Supabase → Salesfinity NOT WIRED
+2. Supabase: 4 instances need audit and consolidation
+3. GitHub: 3 repos on clawdking1-GH need remote migration
+4. clawdking1-GH/ewing-registry needs archiving
+5. GitHub PAT exposed in 2 repo remote URLs — needs rotation
+6. MacBook-GREEN at 96% disk
+7. SSH not enabled on Mac mini (physical bottleneck)
+
+## DO NOT
+- Create new Supabase instances
+- Create new GitHub accounts or repos under clawdking1-GH
+- Store skills only locally — always push via skill-sync
+- Post to Slack canvas — use GitHub
+- Build apps to solve config problems
+- Trust memory for current state — always re-query
