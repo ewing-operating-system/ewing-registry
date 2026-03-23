@@ -112,11 +112,55 @@ Ewing Gillaspy runs AND Capital from Scottsdale, AZ. He's a sales executive, not
 
 The business question behind EVERYTHING: does this help Ewing get a signed representation agreement faster?
 
-## Where To Store Output
+## Where To Store Output — MANDATORY AUTO-PUSH
 
-If the ewing-registry repo is accessible (~/ewing-registry/ or /Users/clawdbot/ewing-registry/):
-- Save the story to `ewing-registry/stories/[session-name]_[date].md`
-- Save the audit to `ewing-registry/analysis/thread-audit_[session-name]_[date].md`
-- Commit and push if git credentials are available
+### Step 1: Clone or locate the repo
+Run these commands in order. Do NOT skip any step.
 
-If not accessible, print the full output in chat for Ewing to paste elsewhere.
+```bash
+# Check if repo exists locally
+if [ -d "$HOME/ewing-registry/.git" ]; then
+  cd "$HOME/ewing-registry" && git pull origin main
+elif [ -d "/Users/clawdbot/ewing-registry/.git" ]; then
+  cd /Users/clawdbot/ewing-registry && git pull origin main
+else
+  # Clone it — try HTTPS first (works without SSH keys)
+  git clone https://github.com/clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null || \
+  git clone git@github.com:clawdking1-GH/ewing-registry.git "$HOME/ewing-registry" 2>/dev/null
+  cd "$HOME/ewing-registry"
+fi
+```
+
+### Step 2: Create the output directories
+```bash
+mkdir -p stories analysis
+```
+
+### Step 3: Write the files
+- Save the story to `stories/[session-name]_[date].md`
+- Save the audit to `analysis/thread-audit_[session-name]_[date].md`
+
+Use the session hostname or VM name as [session-name]. Use YYYY-MM-DD as [date].
+
+### Step 4: Commit and push — ALWAYS ATTEMPT THIS
+```bash
+git add stories/ analysis/
+git commit -m "Add story + audit: [session-name] [date]
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+git push origin main
+```
+
+### Step 5: If push fails
+If git push fails due to auth:
+1. Print the FULL story and audit in chat
+2. Tell Ewing: "Story is ready but I can't push to GitHub from this machine. The files are saved locally at [path]. Run `cd ~/ewing-registry && git push origin main` from a machine with git credentials."
+3. Do NOT silently fail. Always tell Ewing the push status.
+
+### Step 6: Confirm to Ewing
+After push succeeds, tell Ewing:
+- "Story pushed to ewing-registry: stories/[filename]"
+- "Audit pushed to ewing-registry: analysis/[filename]"
+- Include the GitHub URL: https://github.com/clawdking1-GH/ewing-registry
+
+### CRITICAL: Never skip the push. Never ask Ewing to transfer the file manually. Always attempt the push first. The entire point of this skill is zero-effort collection.

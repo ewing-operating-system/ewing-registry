@@ -1,39 +1,45 @@
-# ewing-registry
+# Ewing Registry
 
-Central skill registry for all ClawdBots and Claude sessions.
+Master registry of all machines, credentials, projects, skills, and harvests across Ewing's infrastructure.
 
-## Usage
-
-### Pull latest skills to any machine
-```bash
-cd ~/ewing-registry && git pull origin main
-cp -r ~/ewing-registry/skills/* ~/.claude/skills/
-```
-
-### Or use the skill-sync skill
-Just say "skill sync" in any Claude session.
+**Created:** 2026-03-23
+**Last updated:** 2026-03-23
+**Harvests collected:** 12 (across 3 persistent Macs + 4 ephemeral Cowork VMs)
 
 ## Structure
+
 ```
 ewing-registry/
-├── skills/          # All Claude skills (one folder per skill)
-├── debriefs/        # End-of-session debrief reports
-├── stories/         # Thread narratives (from storyteller skill)
-├── audits/          # System and thread audits
+├── harvests/              # Raw harvest files (one per machine per run)
+├── registry/              # Deduplicated reference tables
+│   ├── README.md          # Master registry (all data combined)
+│   ├── emails.md          # All email identities
+│   ├── credentials.md     # API keys, tokens, secrets (names only)
+│   ├── supabase-instances.md
+│   ├── github-repos.md
+│   ├── skills.md
+│   ├── scheduled-tasks.md
+│   ├── mcp-tools.md
+│   ├── projects.md
+│   └── google-drive.md
+├── status/                # Living status docs
+│   ├── pipeline-status.md
+│   └── risk-register.md
 └── README.md
 ```
 
-## Skills
-| Skill | Purpose |
-|---|---|
-| cold-call-workflow | Daily sales workflow orchestrator |
-| debrief | End-of-session harvester and documenter |
-| disk-cleanup | macOS disk space management |
-| ewing-connectors | API key and credential store |
-| finance-agent | Personal finance command center |
-| password-migration | Password manager migration tool |
-| prompt-refiner | Restructure messy prompts |
-| recording-collector | Audio/video recording cataloger |
-| skill-sync | Bidirectional GitHub ↔ local skill sync |
-| storyteller | Thread narrative and CTO audit |
-| system-auditor | Rotating system health checks |
+## Machines
+| Machine | Type | Primary Value |
+|---|---|---|
+| MacBook-27.local | Primary Mac | 8 skills, 10 tasks, 8 repos, 20 memory files |
+| MacBook-GREEN | Secondary Mac | coldcall-universe dev, 96% disk |
+| ClawdBots-Mac-mini-8 | Server Mac | Hovering Cloud, Phoenix TAM, OpenClaw |
+| Cowork VMs (x4) | Ephemeral | 22 session skills, MCP tools |
+
+## Quick Reference
+- **Supabase instances:** 4 live, 1 dead
+- **GitHub repos:** 10 unique (across 2 accounts)
+- **Skills:** 30+ unique
+- **Scheduled tasks:** 10 production (MB-27) + 7 others
+- **MCP tools:** 16+ unique
+- **Google Drive accounts:** 4 mounted
