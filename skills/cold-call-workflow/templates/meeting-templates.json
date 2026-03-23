@@ -1,0 +1,95 @@
+{
+  "_schema": {
+    "description": "Meeting templates - auto-generated from call outcomes, refined by Ewing",
+    "version": "1.0.0",
+    "fields": {
+      "id": "Template ID",
+      "name": "Template name (e.g., 'Initial Discovery Call', 'Product Demo')",
+      "type": "Meeting type (discovery, demo, follow_up, closing, intro, referral)",
+      "duration_minutes": "Default meeting duration",
+      "subject_template": "Calendar event subject with {{variables}}",
+      "description_template": "Calendar event description with {{variables}}",
+      "agenda": "Array of agenda items",
+      "prep_checklist": "What to prepare before this meeting type",
+      "follow_up_template": "Email template to send after this meeting type",
+      "status": "draft | approved",
+      "created_date": "ISO date",
+      "approved_date": "ISO date when Ewing approved"
+    }
+  },
+  "templates": [
+    {
+      "id": "discovery-initial",
+      "name": "Initial Discovery Call",
+      "type": "discovery",
+      "duration_minutes": 30,
+      "subject_template": "Discovery Call: {{your_company}} + {{prospect_company}}",
+      "description_template": "Hi {{prospect_first_name}},\n\nLooking forward to connecting. Here's a quick agenda:\n\n1. Quick introductions\n2. Learn about {{prospect_company}} and your current approach\n3. Share how we might help\n4. Discuss next steps if there's mutual fit\n\nBest,\nEwing",
+      "agenda": [
+        "Introductions (2 min)",
+        "Prospect situation & pain points (10 min)",
+        "Solution overview relevant to their needs (10 min)",
+        "Q&A (5 min)",
+        "Next steps & timeline (3 min)"
+      ],
+      "prep_checklist": [
+        "Research prospect on LinkedIn",
+        "Research company (size, industry, recent news)",
+        "Review any prior email/call history",
+        "Prepare 3 relevant case studies or proof points",
+        "Have pricing/packaging overview ready"
+      ],
+      "follow_up_template": "Hi {{prospect_first_name}},\n\nGreat speaking with you today. Here's a quick recap:\n\n{{recap_bullets}}\n\nAs discussed, our next step is {{next_step}}. I'll {{your_action}} by {{date}}.\n\nLooking forward to it.\n\nBest,\nEwing",
+      "status": "draft",
+      "created_date": "2026-03-13",
+      "approved_date": null
+    },
+    {
+      "id": "demo-standard",
+      "name": "Product Demo",
+      "type": "demo",
+      "duration_minutes": 45,
+      "subject_template": "Demo: {{your_company}} for {{prospect_company}}",
+      "description_template": "Hi {{prospect_first_name}},\n\nExcited to show you what we've built. Agenda:\n\n1. Quick recap of your goals from our last call\n2. Live demo tailored to {{prospect_company}}\n3. Q&A\n4. Next steps\n\nPlease feel free to invite anyone else from your team.\n\nBest,\nEwing",
+      "agenda": [
+        "Recap discovery findings (5 min)",
+        "Tailored demo (25 min)",
+        "Q&A (10 min)",
+        "Next steps & decision process (5 min)"
+      ],
+      "prep_checklist": [
+        "Review discovery call notes/transcript",
+        "Customize demo environment for their use case",
+        "Prepare answers for likely objections",
+        "Have ROI calculator ready",
+        "Confirm all attendees and their roles"
+      ],
+      "follow_up_template": "Hi {{prospect_first_name}},\n\nThanks for taking the time for the demo today. Here's what we covered:\n\n{{recap_bullets}}\n\nAttached: {{attachments}}\n\nNext step: {{next_step}} by {{date}}.\n\nBest,\nEwing",
+      "status": "draft",
+      "created_date": "2026-03-13",
+      "approved_date": null
+    },
+    {
+      "id": "callback-scheduled",
+      "name": "Scheduled Callback",
+      "type": "follow_up",
+      "duration_minutes": 15,
+      "subject_template": "Follow-up Call: Ewing Gillaspy + {{prospect_name}}",
+      "description_template": "Scheduled callback per our conversation on {{original_call_date}}.\n\nContext: {{callback_reason}}",
+      "agenda": [
+        "Re-introduce and reference prior conversation",
+        "Address their specific question/concern",
+        "Advance to next stage"
+      ],
+      "prep_checklist": [
+        "Review notes from original call",
+        "Prepare answer to their specific question",
+        "Have calendar ready to book next meeting if appropriate"
+      ],
+      "follow_up_template": null,
+      "status": "draft",
+      "created_date": "2026-03-13",
+      "approved_date": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_schema": {
+    "description": "Number Quality Database - tracks the quality of phone numbers for prospects",
+    "version": "1.0.0",
+    "statuses": ["GOOD", "BAD", "UNKNOWN", "DNC"],
+    "fields": {
+      "phone": "Phone number in E.164 format",
+      "status": "GOOD | BAD | UNKNOWN | DNC",
+      "prospect_name": "Name of intended prospect",
+      "company": "Company name",
+      "source": "Where number came from (clay, exa, salesfinity, manual, linkedin)",
+      "attempts": "Number of dial attempts to this number",
+      "last_attempt": "ISO date of last attempt",
+      "last_outcome": "Most recent call outcome",
+      "notes": "Any notes about this number",
+      "added_date": "ISO date when number was first added",
+      "updated_date": "ISO date of last update"
+    }
+  },
+  "numbers": []
+}

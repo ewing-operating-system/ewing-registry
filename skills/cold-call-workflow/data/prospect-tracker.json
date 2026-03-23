@@ -1,0 +1,43 @@
+{
+  "_schema": {
+    "description": "Prospect Status Tracker - lightweight CRM pipeline tracker",
+    "version": "1.0.0",
+    "pipeline_stages": [
+      "cold",
+      "attempted",
+      "contacted",
+      "meeting_set",
+      "meeting_held",
+      "opportunity",
+      "closed_won",
+      "closed_lost",
+      "nurture",
+      "disqualified"
+    ],
+    "fields": {
+      "id": "Unique prospect ID (auto-generated)",
+      "name": "Prospect full name",
+      "title": "Job title",
+      "company": "Company name",
+      "email": "Best email address",
+      "phone": "Best phone number",
+      "linkedin": "LinkedIn profile URL",
+      "stage": "Current pipeline stage",
+      "stage_history": "Array of {stage, date, reason} transitions",
+      "source": "Lead source (exa, clay, salesfinity, referral, inbound, manual)",
+      "bant_score": "Latest BANT score (0-12)",
+      "meddic_score": "Latest MEDDIC score (0-30) - populated at meeting stage",
+      "total_attempts": "Total dial attempts across all numbers",
+      "total_connects": "Total times actually connected",
+      "last_contact_date": "ISO date of last meaningful contact",
+      "next_action": "What to do next",
+      "next_action_date": "When to do it",
+      "meeting_date": "Scheduled meeting date if applicable",
+      "notes": "Free-form notes",
+      "tags": "Array of tags for segmentation",
+      "created_date": "ISO date when prospect was added",
+      "updated_date": "ISO date of last update"
+    }
+  },
+  "prospects": []
+}

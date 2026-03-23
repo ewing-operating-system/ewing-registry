@@ -1,0 +1,5 @@
+{
+  "skill": "disk-cleanup",
+  "description": "Tracks disk space audit results over time to show trends and cleanup history",
+  "audits": []
+}

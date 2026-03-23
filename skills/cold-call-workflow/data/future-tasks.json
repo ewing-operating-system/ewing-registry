@@ -1,0 +1,49 @@
+{
+  "_schema": {
+    "description": "Future integration tasks and backlog items for the cold call workflow",
+    "version": "1.0.0"
+  },
+  "tasks": [
+    {
+      "id": "ft-001",
+      "title": "SpokePhone API Integration",
+      "description": "Connect SpokePhone call logs to the daily workflow. Needs OAuth2 credentials (SPOKE_CLIENT_ID + SPOKE_CLIENT_SECRET). Will pull call logs, durations, dispositions, recording URLs.",
+      "status": "blocked",
+      "blocked_by": "Awaiting API credentials from Ewing",
+      "priority": "medium",
+      "created_date": "2026-03-16",
+      "category": "integration"
+    },
+    {
+      "id": "ft-002",
+      "title": "Clay.com Enrichment Pipeline",
+      "description": "Connected via webhook + Google Sheets. Webhook receives company data, Clay enriches (Claygent + phone waterfall), pushes to Google Sheet 'Clay Enriched Results'. Claude Code reads sheet and loads to Salesfinity.",
+      "status": "complete",
+      "blocked_by": null,
+      "priority": "medium",
+      "created_date": "2026-03-16",
+      "completed_date": "2026-03-17",
+      "category": "integration"
+    },
+    {
+      "id": "ft-003",
+      "title": "Salesfinity Call Log Sync",
+      "description": "Now unblocked. Endpoint is /v1/call-log (singular). 8,039 records available. Need to build daily sync into workflow to pull new calls, match to prospects, update pipeline stages.",
+      "status": "in_progress",
+      "blocked_by": null,
+      "priority": "high",
+      "created_date": "2026-03-16",
+      "category": "integration"
+    },
+    {
+      "id": "ft-004",
+      "title": "Recording Library Transcription Pipeline",
+      "description": "Automated transcription of all .m4a recordings using Whisper. 20/23 complete. Needs permanent ffmpeg install. Feed transcripts into Lovable recording library tab.",
+      "status": "in_progress",
+      "blocked_by": null,
+      "priority": "high",
+      "created_date": "2026-03-16",
+      "category": "feature"
+    }
+  ]
+}

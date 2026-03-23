@@ -1,0 +1,23 @@
+{
+  "_schema": {
+    "description": "Daily activity metrics for sparkline graphs and velocity tracking",
+    "version": "1.0.0",
+    "fields": {
+      "date": "ISO date (YYYY-MM-DD)",
+      "dials": "Total outbound calls made",
+      "connects": "Calls where prospect answered",
+      "voicemails": "Voicemails left",
+      "meetings_set": "New meetings booked",
+      "meetings_held": "Meetings that occurred",
+      "emails_sent": "Outbound emails sent",
+      "emails_received": "Inbound emails from prospects",
+      "talk_time_minutes": "Total minutes on calls",
+      "bad_numbers_found": "Numbers marked BAD today",
+      "new_prospects_added": "Net new prospects entered pipeline",
+      "prospects_advanced": "Prospects that moved forward a stage",
+      "dial_to_connect_pct": "Calculated: connects / dials * 100",
+      "connect_to_meeting_pct": "Calculated: meetings_set / connects * 100"
+    }
+  },
+  "days": []
+}

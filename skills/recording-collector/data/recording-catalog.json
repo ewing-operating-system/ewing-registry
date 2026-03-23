@@ -1,0 +1,82 @@
+{
+  "$schema": "recording-catalog-v1",
+  "description": "Schema for the recording catalog. Each entry in the 'recordings' array follows this structure.",
+  "last_scan": null,
+  "scan_directories": [
+    "~/Desktop/Desktop Cleanup",
+    "~/Downloads",
+    "~/Documents/Zoom",
+    "~/Library/CloudStorage/GoogleDrive-ewing@chapter.guide",
+    "~/Movies/iMovie Library.imovielibrary",
+    "~/Library/Group Containers",
+    "~/My Drive (ewing@engram.nexus)",
+    "~/My Drive (ewing@chapter.guide)"
+  ],
+  "recordings": [],
+  "_entry_schema": {
+    "id": "string (UUID v4)",
+    "filename": "string",
+    "path": "string (absolute path to file)",
+    "duplicate_paths": ["string (other locations where this file exists)"],
+    "size_bytes": 0,
+    "size_human": "string (e.g., '2.4 GB')",
+    "media_type": "video | audio",
+    "file_extension": "string (e.g., '.mp4')",
+    "created_date": "ISO 8601 datetime",
+    "modified_date": "ISO 8601 datetime",
+    "duration_seconds": 0,
+    "duration_human": "string (e.g., '1h 23m 45s')",
+    "source_app": "Zoom | Fireflies | iMovie | Voice Memos | Apple Notes | macOS Screen Recording | Pitch / PEC Evidence | Unknown",
+    "thumbnail_path": "string | null (path to generated thumbnail jpg)",
+    "multi_meeting": false,
+    "segments": [
+      {
+        "segment_id": "string (UUID v4)",
+        "parent_recording_id": "string (parent recording UUID)",
+        "start_seconds": 0,
+        "end_seconds": 0,
+        "duration_seconds": 0,
+        "participants": [],
+        "summary": "string (50-word summary)",
+        "key_questions": [],
+        "sales_opportunity": null
+      }
+    ],
+    "transcription_status": "completed | pending | failed | not_applicable",
+    "transcript_path": "string | null (path to transcript JSON)",
+    "summary": "string | null (50-word summary of full recording)",
+    "participants": [
+      {
+        "name": "string",
+        "title": "string | null",
+        "company": "string | null",
+        "linkedin_search_url": "string | null",
+        "confidence": "high | medium | low",
+        "notes": "string | null (clues about identity if uncertain)"
+      }
+    ],
+    "participant_notes": "string | null (general notes about unidentified speakers)",
+    "key_questions": [
+      {
+        "question": "string",
+        "asked_by": "string (name or 'Unknown speaker')",
+        "answered_by": "string (name or 'Unknown speaker')",
+        "answer_summary": "string (1-2 sentences)",
+        "discussion_duration_seconds": 0
+      }
+    ],
+    "is_sales_opportunity": false,
+    "deal_details": {
+      "fee_percentage": "number | null",
+      "deal_value": "number | null",
+      "lp_raise_amount": "number | null",
+      "estimated_compensation": "number | null",
+      "notes": "string | null"
+    },
+    "large_file": false,
+    "requires_ffmpeg": false,
+    "processing_errors": ["string"],
+    "added_to_catalog": "ISO 8601 datetime",
+    "last_processed": "ISO 8601 datetime"
+  }
+}

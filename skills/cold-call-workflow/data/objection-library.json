@@ -1,0 +1,19 @@
+{
+  "_schema": {
+    "description": "Objection library - populated automatically from call analysis",
+    "version": "1.0.0",
+    "categories": ["timing", "budget", "authority", "competition", "status_quo", "trust", "relevance", "other"],
+    "fields": {
+      "id": "Unique objection instance ID",
+      "category": "Objection category",
+      "objection_text": "What the prospect said (verbatim or paraphrased)",
+      "response_used": "How Ewing responded",
+      "outcome": "What happened after (meeting_set, callback, rejected, etc.)",
+      "prospect_name": "Who raised the objection",
+      "call_date": "When this occurred",
+      "effectiveness": "1-5 rating based on outcome (auto-scored)",
+      "notes": "Additional context"
+    }
+  },
+  "objections": []
+}
