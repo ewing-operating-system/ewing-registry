@@ -65,6 +65,8 @@ Based on the user interview, fill in these components:
 
 - **name**: Skill identifier
 - **description**: When to trigger, what it does. This is the primary triggering mechanism - include both what the skill does AND specific contexts for when to use it. All "when to use" info goes here, not in the body. Note: currently Claude has a tendency to "undertrigger" skills -- to not use them when they'd be useful. To combat this, please make the skill descriptions a little bit "pushy". So for instance, instead of "How to build a simple fast dashboard to display internal Anthropic data.", you might write "How to build a simple fast dashboard to display internal Anthropic data. Make sure to use this skill whenever the user mentions dashboards, data visualization, internal metrics, or wants to display any kind of company data, even if they don't explicitly ask for a 'dashboard.'"
+  - **CRITICAL: Descriptions must be written in third person.** Never use "I can help you" or "Use this skill when you". Instead: "Processes Excel files and generates reports. Use when working with .xlsx files or spreadsheet data."
+  - **Description max is 1024 characters.** The entire available_skills list has a 15,000-character budget — if Ewing has 35+ skills, verbose descriptions will cause skills to be silently excluded. Keep descriptions tight.
 - **compatibility**: Required tools, dependencies (optional, rarely needed)
 - **the rest of the skill :)**
 
@@ -108,6 +110,12 @@ cloud-deploy/
 ```
 Claude reads only the relevant reference file.
 
+#### Portability
+
+- Use `${CLAUDE_SKILL_DIR}` instead of hardcoded paths like `~/.claude/skills/skill-name/`. This variable resolves to the skill's installation directory automatically.
+- Use forward slashes only. Never Windows-style backslashes.
+- Never embed API keys or credentials in SKILL.md. Reference the keys-and-credentials skill instead.
+
 #### Principle of Lack of Surprise
 
 This goes without saying, but skills must not contain malware, exploit code, or any content that could compromise system security. A skill's contents should not surprise the user in their intent if described. Don't go along with requests to create misleading skills or skills designed to facilitate unauthorized access, data exfiltration, or other malicious activities. Things like a "roleplay as an XYZ" are OK though.
@@ -133,6 +141,14 @@ ALWAYS use this exact template:
 Input: Added user authentication with JWT tokens
 Output: feat(auth): implement JWT-based authentication
 ```
+
+### Frontmatter Power Features
+
+- `disable-model-invocation: true` — User-only invocation. Use for destructive skills (deploy, delete, push).
+- `user-invocable: false` — Claude-only. Use for background knowledge (legacy-system-context, rate-oracle).
+- `allowed-tools: Bash(git:*),Read` — Scoped tool permissions per skill. Only grant what's needed.
+- `context: fork` — Runs skill in isolated subagent. Use for independent work (harvester, research) that doesn't need conversation history.
+- `model: claude-sonnet-4-6` — Override model per skill. Use Haiku for grunt work, Opus for quality-critical output.
 
 ### Writing Style
 
@@ -334,6 +350,8 @@ This is optional, requires subagents, and most users won't need it. The human re
 
 The description field in SKILL.md frontmatter is the primary mechanism that determines whether Claude invokes a skill. After creating or improving a skill, offer to optimize the description for better triggering accuracy.
 
+Activation rates by optimization level: No optimization = ~20% trigger rate. Optimized description = ~50%. Description + examples in SKILL.md = ~72%. Forced eval hook = ~84%. Focus on getting descriptions to 50%+ before investing in hooks.
+
 ### Step 1: Generate trigger eval queries
 
 Create 20 eval queries — a mix of should-trigger and should-not-trigger. Save as JSON:
@@ -481,5 +499,16 @@ Repeating one more time the core loop here for emphasis:
 - Package the final skill and return it to the user.
 
 Please add steps to your TodoList, if you have such a thing, to make sure you don't forget. If you're in Cowork, please specifically put "Create evals JSON and run `eval-viewer/generate_review.py` so human can review test cases" in your TodoList to make sure it happens.
+
+## Skill Quality Checklist
+
+Before finalizing any skill, verify:
+
+- [ ] Description is under 1024 characters
+- [ ] Description is written in third person
+- [ ] No hardcoded paths — uses `${CLAUDE_SKILL_DIR}` where needed
+- [ ] No embedded credentials
+- [ ] `allowed-tools` scoped to minimum needed
+- [ ] Tested trigger rate against 10+ realistic prompts
 
 Good luck!
