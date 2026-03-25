@@ -1,6 +1,6 @@
 ---
 name: password-migration
-description: "Migrate passwords from any password manager (Keeper, LastPass, Dashlane, Bitwarden, Chrome, Firefox, etc.) into 1Password. Use this skill whenever the user mentions password migration, switching password managers, importing passwords, exporting from Keeper/LastPass/Dashlane/Bitwarden, importing to 1Password, password export, password consolidation, merging password vaults, cleaning up a password export, deduplicating passwords, or converting password formats. Also trigger when the user drops a CSV file that looks like a password export, mentions '1password import', or asks about moving credentials between managers."
+description: "Password manager import/export tool. Migrates passwords from any source manager (Keeper, LastPass, Dashlane, Bitwarden, Chrome, Firefox) into 1Password. Full pipeline: discover exports, parse, clean, deduplicate, convert format, and deliver a ready-to-import CSV. Built from a real Keeper-to-1Password migration of 1,200 entries down to 803 clean records."
 ---
 
 # Password Migration Skill

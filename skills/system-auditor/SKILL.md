@@ -1,14 +1,6 @@
 ---
 name: system-auditor
-description: >
-  Rotating audit loop for AND Call Command. Maintains a registry of every engine, page,
-  and agent in the system. Tracks when each was last audited. Systematically cycles through
-  them on a weekly rotation: audit → report → fix → update registry.
-  Use this skill when Ewing says "audit", "check everything", "what's broken", "system health",
-  "run the auditor", "night audit", "check my data", "what needs cleaning", "rotate audit",
-  or any request to validate the system state.
-  Also trigger on: "what's missing", "trace the data", "master audit", "schema check",
-  "what's next to audit", "clean the engines".
+description: "Rotating infrastructure health checker. Maintains a registry of every engine, page, and agent in the AND Call Command system. Tracks when each was last audited and systematically cycles through them on a weekly rotation: audit, report, fix, update registry. Validates data integrity, traces data flow, checks schemas, and identifies what needs cleaning."
 autoTrigger: false
 ---
 

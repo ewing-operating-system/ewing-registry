@@ -1,16 +1,6 @@
 ---
 name: salesfinity-loader
-description: >
-  Push contacts from Supabase to Salesfinity's AI parallel dialer. This skill READS
-  from Supabase (persons + phone_numbers + companies + lists + list_assignments),
-  enforces all pre-load gates (DNC table, DNC flag, dedup across lists, geography,
-  phone required, naming convention), and then pushes to Salesfinity via API.
-  Max 2,000 contacts per list — no batching needed. It can also accept raw contact
-  data (CSV/JSON) for direct push when Ewing explicitly approves bypassing Supabase.
-  Use this skill whenever the user wants to push to Salesfinity, create a dialing list,
-  queue contacts for dialing, manage Salesfinity lists, check call logs, pull analytics,
-  review scored calls, or manage webhooks. Also trigger on "salesfinity", "parallel
-  dialer", "dialing queue", "load into dialer", "push to dialer".
+description: "Dialer list push from Supabase. Reads enriched contacts from Supabase and pushes them to Salesfinity's AI parallel dialer. Enforces six pre-load gates: DNC table check, DNC flag check, dedup across lists, geography filter, phone required, and naming convention. Never accepts raw data directly. All contacts must exist in Supabase first."
 ---
 
 # Salesfinity Loader — Complete API Client (Updated March 2026)

@@ -1,6 +1,6 @@
 ---
 name: skill-loader
-description: "ALWAYS TRIGGER ON FIRST MESSAGE OF EVERY SESSION. This skill loads Ewing's default skills at the start of any new Claude Code or Cowork session. Trigger whenever Ewing says 'skill loader', 'load my skills', 'start up', 'boot up', 'load defaults', or at the very first interaction of a new session. Also trigger if Ewing says 'load skills' or 'default skills'. This is Ewing's session bootstrapper — it ensures output-skill, task-router, prompt-refiner, skill-creator, and tech-translator are always active."
+description: "Session startup skill bootstrapper. Triggers on the first message of every new session. Pulls latest skills from GitHub via skill-sync, then ensures output-skill, prompt-refiner, skill-creator, and tech-translator are always loaded and active. This is the session bootstrapper that guarantees a consistent environment every time Ewing opens a new thread."
 ---
 
 # Skill Loader

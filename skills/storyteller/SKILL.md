@@ -1,6 +1,6 @@
 ---
 name: storyteller
-description: "Tell the story of what happened in a Claude thread — written like a narrative, analyzed like a CTO audit. Read the full conversation history as far back as memory allows, then produce a story that a non-developer can follow AND a technical team can act on. Every project, skill, file, decision, mistake, pivot, and breakthrough gets captured. Apply the 30-tag anti-pattern taxonomy from the ewing-registry analysis to everything found. Trigger when Ewing says 'tell me the story', 'what happened here', 'storyteller', 'thread story', 'what did we build', 'what went wrong', 'recap this thread', 'give me the narrative', 'debrief this session', or any request to understand what happened in a past or current thread."
+description: "Thread narrative and CTO audit. Reads the full conversation history and produces two outputs: a narrative story that a non-developer can follow (written in past tense, third person, like a book chapter), and a CTO-level technical audit tagging every anti-pattern found using a 30-tag taxonomy from the ewing-registry analysis framework."
 ---
 
 # Storyteller

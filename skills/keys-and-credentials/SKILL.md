@@ -1,6 +1,6 @@
 ---
 name: keys-and-credentials
-description: "Permanent credential vault for all ClawdBots. Store, label, timestamp, and organize every API key, token, and credential Ewing provides. This is the SINGLE SOURCE OF TRUTH. Every bot reads from here. Never ask Ewing for a key that's already stored. When Ewing gives ANY key, update this file immediately."
+description: "Permanent credential storage vault. Organized vault for every API key, token, password, and credential across the ClawdBot fleet. Every new session reads from here. Keys are labeled, timestamped, and tracked as ACTIVE, RETIRED, or CHECK status. When Ewing provides any key, it gets stored here immediately with full context."
 ---
 
 # Keys & Credentials Vault

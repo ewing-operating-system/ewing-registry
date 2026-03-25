@@ -1,6 +1,6 @@
 ---
 name: rate-oracle
-description: "Track API rate limits, costs, tiers, incident history, and automatic recovery protocols. Trigger whenever ClawdBot hits a rate limit, gets a 429 error, stalls for more than 2 minutes, or before running any batch/pipeline operation."
+description: "API cost and limit tracker. Cost and speed intelligence layer for all API calls. Tracks rate limits, pricing tiers, incident history, and automatic recovery protocols for every service Ewing uses. Triggers before batch operations to prevent surprise throttling. Finds free workarounds for paid APIs and celebrates cost savings across three businesses."
 ---
 
 # Rate Oracle

@@ -1,17 +1,6 @@
 ---
 name: prompt-refiner
-description: >
-  Intercept and restructure messy, stream-of-consciousness prompts before executing
-  them. Use this skill whenever the user dumps a long unstructured request that mixes
-  vision, feature ideas, tool preferences, context, complaints, and action items into
-  one block. Also trigger when the user says "help me improve this prompt", "clean this
-  up before running it", "refine this", "make this prompt better", "I'm rambling but...",
-  "before you do anything, structure this", or pastes a wall of text that reads more
-  like thinking-out-loud than a clear instruction. Trigger even when the user doesn't
-  explicitly ask for refinement — if the input is clearly stream-of-consciousness with
-  multiple competing intentions (review + build + compare + plan), catch it and offer
-  to restructure before executing. Do NOT trigger for simple, clear, single-intent
-  requests that don't need restructuring.
+description: "Messy prompt restructuring interceptor. Catches stream-of-consciousness prompts that mix vision, feature ideas, tool preferences, context, complaints, and action items into one block. Restructures them into clear, actionable instructions before execution. Triggers automatically when input has multiple competing intentions, or when Ewing explicitly asks to clean up a prompt."
 ---
 
 # Prompt Refiner

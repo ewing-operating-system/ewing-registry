@@ -1,6 +1,6 @@
 ---
 name: skill-sync
-description: "Keeps all skills synchronized between GitHub (ewing-registry) and local ~/.claude/skills/. GitHub is the source of truth. Every skill creation, modification, or deletion gets pushed to GitHub. Every new session pulls the latest from GitHub. Run this to sync now, or it runs automatically via debrief. Trigger when Ewing says 'sync skills', 'push skills', 'pull skills', 'update skills', 'skill sync', or when any skill is created or modified. Also trigger on session start alongside skill-loader."
+description: "GitHub skills synchronization manager. Keeps all skills synchronized between GitHub (ewing-registry) and local ~/.claude/skills/. GitHub is the single source of truth. Every skill creation, modification, or deletion gets pushed to GitHub. Every new session pulls the latest. Eliminates skill mismatch, duplicate skills, and multi-machine drift across the fleet."
 ---
 
 # Skill Sync — GitHub as Single Source of Truth

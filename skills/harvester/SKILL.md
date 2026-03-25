@@ -1,6 +1,6 @@
 ---
 name: harvester
-description: "One-time consolidation harvester. Run this in ANY Claude thread to extract all valuable artifacts from that machine and push them to the ewing-registry GitHub repo. Zero questions, zero config. Just run it. Trigger when Ewing says 'harvest', 'run harvester', 'consolidate', 'extract everything', 'collect everything', or 'run the harvester'."
+description: "Machine artifact extraction agent. Zero-config extraction agent that silently scans the current machine for every valuable artifact: skills, credentials, configs, scripts, databases, project files, and outputs. Structures everything into a report and pushes it to the ewing-registry GitHub repo. Asks zero questions and explains nothing. Just harvests and reports."
 ---
 
 # ClawdBot Harvester

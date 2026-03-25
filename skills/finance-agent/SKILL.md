@@ -1,6 +1,6 @@
 ---
 name: finance-agent
-description: Personal finance command center — track all accounts, investments, net worth, portfolio allocation, and cash flow. Trigger on finance, net worth, portfolio, cash position, investments, accounts, cashflow, spending, budget, holdings, allocation, bank balance, Wells Fargo, Chase, Plaid, financial summary, money, assets, liabilities, debt.
+description: "Personal finance tracking dashboard. Tracks all financial accounts, investments, net worth, portfolio allocation, and cash flow using a local SQLite database. Covers Wells Fargo, Chase, and other accounts via Plaid integration. Generates daily snapshots of holdings, spending patterns, asset categories, liabilities, and budget tracking across Ewing's three businesses."
 version: 1.0.0
 ---
 

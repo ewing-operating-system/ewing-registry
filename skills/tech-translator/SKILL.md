@@ -1,6 +1,6 @@
 ---
 name: tech-translator
-description: "Translate technical output, error messages, terminal screens, and developer jargon into plain English that a non-engineer can understand and learn from. Trigger whenever Ewing says 'what does this mean', 'translate this', 'explain this', 'what is this saying', 'break this down', 'I don't understand this', or sends a screenshot of terminal output, error messages, config files, or developer documentation and asks for clarification. Also trigger when Ewing encounters any technical concept for the first time. This skill teaches — it doesn't just explain."
+description: "Jargon to plain English converter. Translates technical output, error messages, terminal screens, and developer jargon into plain English. Every translation has three parts: what it says (plain English), why it matters (context), and what to do about it (action). Teaches Ewing the concepts so he builds technical literacy, not just gets past blockers."
 ---
 
 # Tech Translator

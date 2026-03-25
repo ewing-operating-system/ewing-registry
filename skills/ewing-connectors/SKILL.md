@@ -1,6 +1,6 @@
 ---
 name: ewing-connectors
-description: "Unified API key and credential store for all of Ewing's integrations. Use this skill whenever you need credentials for Supabase, Salesfinity, Exa.ai, Clay, Google Sheets, or any other service Ewing uses. Also trigger when Claude asks Ewing for an API key, connection string, or credential — check here first before asking. Trigger on: API key, credentials, connection string, service role key, anon key, webhook URL, or any mention of connecting to an external service."
+description: "Unified API credential vault. Single source of truth for all service credentials including Supabase (live and old), Salesfinity, Exa.ai, Clay, Google Sheets service accounts, and Lovable project IDs. Stores base URLs, auth headers, user IDs, workspace IDs, and webhook URLs. Claude checks here before ever asking Ewing for a key."
 ---
 
 # Ewing Connectors — Unified Credential Store

@@ -1,6 +1,6 @@
 ---
 name: clawdbot-creator
-description: "The master blueprint for spawning new ClawdBots. Contains Ewing's full environment: API keys, credentials, machine topology, connected tools, installed skills, rate limits, known errors and fixes, and step-by-step setup procedures. Trigger whenever Ewing says 'new clawdbot', 'spawn a bot', 'start fresh', 'new project', 'set up a new agent', 'build a bot', 'clawdbot creator', 'what are my keys', 'what's my setup', 'what tools do I have', or starts a new session where a ClawdBot needs to be configured. Also trigger when any new Claude Code or Cowork thread needs to know Ewing's environment, credentials, or tool stack. This skill exists so Ewing never has to re-explain his setup or dig for API keys again."
+description: "Blueprint for spawning new bots. Master environment template containing all API keys, credentials, machine topology, connected tools, installed skills, rate limits, known errors, and setup procedures. Every new Claude Code or Cowork thread reads this first so Ewing never re-explains his setup or digs for keys again."
 ---
 
 # ClawdBot Creator

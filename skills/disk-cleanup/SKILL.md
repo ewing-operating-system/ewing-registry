@@ -1,6 +1,6 @@
 ---
 name: disk-cleanup
-description: Comprehensive disk space management and cleanup tool for macOS. Audits all storage, finds duplicates, large files, stale caches, cloud storage bloat, and presents actionable cleanup recommendations with risk levels.
+description: "Mac storage audit and cleanup. Comprehensive disk space management tool for macOS. Audits all storage volumes, finds duplicate files, identifies large files and stale caches, detects cloud storage bloat, and presents actionable cleanup recommendations organized by risk level so Ewing can reclaim space without accidentally deleting important files."
 triggers:
   - disk space
   - storage

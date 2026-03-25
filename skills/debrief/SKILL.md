@@ -1,6 +1,6 @@
 ---
 name: debrief
-description: "End-of-thread intelligence extraction. Combines harvester (machine scan) + storyteller (conversation analysis) into one zero-config command. Scans the machine, reads the full conversation, writes the narrative + audit + harvest, and pushes everything to the ewing-registry GitHub repo. Run this before closing ANY significant thread. Trigger when Ewing says 'debrief', 'debrief this thread', 'wrap up', 'close out', 'end of thread', 'save everything', 'before we close', 'capture this session', or any indication that a thread is ending and work should be preserved."
+description: "End-of-thread intelligence extraction. Combines the harvester (machine scan) and storyteller (conversation analysis) into one zero-config command. Scans the machine for artifacts, reads the full conversation, writes a narrative plus audit plus harvest report, syncs skills to GitHub, and pushes everything to the ewing-registry repo before a thread closes."
 ---
 
 # Debrief — End-of-Thread Intelligence Extraction

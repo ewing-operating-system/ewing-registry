@@ -1,6 +1,6 @@
 ---
 name: cold-call-workflow
-description: Use this skill whenever Ewing mentions daily summary, morning prep, cold calling, call review, prospect tracking, call scoring, meeting templates, daily activity, sparkline, call outcomes, number quality, prospect status, BANT, MEDDIC, daily report, or asks to review yesterday's work. This is the master orchestrator for Ewing's daily sales workflow.
+description: "Daily sales activity orchestrator. Pulls yesterday's data from Gmail, Calendar, Fireflies transcripts, SpokePhone, and Salesfinity in parallel. Cross-references all sources, classifies call outcomes (connected, voicemail, gatekeeper, bad number), scores calls against BANT/MEDDIC frameworks, tracks number quality, and generates a unified daily activity summary."
 version: 1.0.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: file-share
-description: "Send files, text, or documents to the Hovering Cloud shared clipboard so all connected Macs can instantly access them. Also installs or updates the Hovering Cloud app. Use this skill whenever the user says 'file share', 'share this', 'put this in the cloud', 'send to cloud', 'hovering cloud', 'output to cloud', 'share across machines', 'send to my other Mac', 'push to cloud', or asks to make any file, document, or output available to their other computers. Also trigger when the user says 'install hovering cloud', 'update hovering cloud', 'set up file sharing', or references sharing files between their Macs. If the user says 'output using file share' or 'use file share skill' after completing a task, send the output files to the Hovering Cloud. Even if the user just mentions wanting something on another machine or accessible from other computers, this is the right skill."
+description: "Cross-machine file sharing tool. Connects Claude to Ewing's Hovering Cloud app, a floating shared clipboard running across all Macs on the same Wi-Fi. Files and text sent to the cloud are instantly visible and downloadable from any connected machine. Can also install or update the Hovering Cloud application itself."
 ---
 
 # File Share — Hovering Cloud Integration

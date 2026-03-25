@@ -1,6 +1,6 @@
 ---
 name: mission-control
-description: "The command center for all ClawdBots. Trigger on EVERY new session start, or whenever Ewing says 'status', 'where did we leave off', 'what's running', 'what's broken', 'check the bots', 'mission control', 'what's stuck', 'resume', 'pick up where we left off', 'allocate', 'split the work', 'how many bots', 'capacity', 'workload', 'which bot', or asks about the state of any project or pipeline. Also trigger when Ewing opens a new Cowork or Claude Code thread and needs to get oriented — this skill tells him exactly what's happening across all machines and projects without him having to remember or ask. If Ewing seems confused about what's running, what's broken, or what to do next, use this skill."
+description: "ClawdBot fleet command center. Gives Ewing a fast, accurate picture of what's happening across all his bots, machines, and projects. Shows what's running, what's broken, what's stuck, and what to do next. Helps allocate work across bots, tracks capacity and workload, and orients any new session without Ewing having to remember anything."
 ---
 
 # Mission Control

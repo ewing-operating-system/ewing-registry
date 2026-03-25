@@ -1,6 +1,6 @@
 ---
 name: recording-collector
-description: Scan, catalog, transcribe, and display all audio/video recordings scattered across Ewing's Mac on a Lovable site
+description: "Audio/video recording catalog scanner. Scans Ewing's Mac for all audio and video recordings scattered across folders, catalogs them with metadata, transcribes content, and displays everything on a Lovable-hosted site. Turns a disorganized collection of recordings into a searchable, browsable inventory with transcripts and contextual information for each file."
 version: 1.0.0
 triggers:
   - collect recordings
